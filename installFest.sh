@@ -17,8 +17,11 @@ do :
    brew cask install $program
 done
 
-cp .bash_profile ~
+cp ./commandLine/.bash_profile ~
+cp ./commandLine/.zshrc ~
 cp git/.gitconfig ~
 cp git/.gitignore_global ~
 cp git/git-completion.bash ~
 source ~/.bash_profile
+
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
