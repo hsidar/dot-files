@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-unction werk {
+function werk {
 	cd ~/werk
 }
 
@@ -114,6 +114,10 @@ source ~/git-completion.bash
 #PATH
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
 export EDITOR='subl -w'
+
 #add Homebrew’s sbin to PATH
 export PATH=/usr/local/sbin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
