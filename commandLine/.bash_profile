@@ -12,8 +12,6 @@ function phpserver {
     php -S localhost:8000
 }
 
-source ~/git-completion.bash
-
 function mkcd {
   last=$(eval "echo \$$#")
   if [ ! -n "$last" ]; then
