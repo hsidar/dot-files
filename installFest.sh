@@ -1,5 +1,3 @@
-#!/bin/bash
-
 cp -v ./commandLine/.bash_profile ~ &>/dev/null
 cp -v ./commandLine/.zshrc ~ &>/dev/null
 
@@ -28,6 +26,7 @@ if ! type brew &>/dev/null; then
 fi
 
 # Install programs
+oldIFS=$IFS
 IFS="" # This overwrites a default that causes all spaces in arrays to behave as array delimiters.
 brewPrograms=(sublime-text visual-studio-code google-chrome brave firefox vivaldi karabiner-elements iterm2 postman hipchat slack sequel-pro skype-for-business docker)
 appStorePrograms=("Microsoft Remote Desktop" "Better Snap Tool" "Flycut")
@@ -90,7 +89,6 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
 fi
 
 # Change default system settings
-
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 echo "Three finger drag enabled"
 defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
@@ -102,6 +100,8 @@ echo "Show battery percent enabled"
 defaults write com.apple.dock autohide -bool true
 echo "Autohide Dock enabled"
 
+#Change desktop wallpaper
+IFS=$oldIFS
 echo "What image do you want to make your background?"
 backgroundImages=($(ls ./images/desktops/))
 backgroundImages+=("None")
