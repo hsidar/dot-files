@@ -27,41 +27,66 @@ if ! type brew &>/dev/null; then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-echo "Would you like to install programs? y/n"
+# Install programs
+IFS="" # This overwrites a default that causes all spaces in arrays to behave as array delimiters.
+brewPrograms=(sublime-text visual-studio-code google-chrome brave firefox vivaldi karabiner-elements iterm2 postman hipchat slack sequel-pro skype-for-business docker)
+appStorePrograms=("Microsoft Remote Desktop" "Better Snap Tool" "Flycut")
+
+echo "Do you want to install Homebrew and App Store programs? y/n"
 read answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
+	
+	brewProgramsToInstall=()
 
-	programs=(sublime-text visual-studio-code google-chrome brave firefox vivaldi karabiner-elements iterm2 postman hipchat slack sequel-pro skype-for-business docker)
-
-	for program in ${programs[@]}
+	for program in ${brewPrograms[@]}
 	do : 
 		echo "Do you want to install $program? Y/N"
 		read REPLY
-		echo    # (optional) move to a new line
 		if [[ $REPLY =~ ^[Yy]$ ]]; then
-			brew cask install $program
+			brewProgramsToInstall+=($program)
 		fi
 	done
-fi
 
-# Log into Apple account and install App Store apps
-if ! type mas &>/dev/null 2>&1; then
-	brew install mas
-elif ! mas account &>/dev/null; then
-	echo "What is your Apple ID?"
-	read appleID
-	mas signin --dialog $appleID
-fi
+	for program in ${appStorePrograms[@]}
+	do : 
+		echo "Do you want to install $program? Y/N"
+		read REPLY
+		if [[ $REPLY =~ ^[Yy]$ ]]; then
+			appStoreProgramsToInstall+=($program)
+		fi
+	done
 
-if mas account &>/dev/null; then
-	# Better Snap Tool
-	mas install 417375580
-	# Flycut
-	mas install 442160987
-	# Microsoft Remote Desktop
-	mas install 1295203466
-else
-	echo "You are not logged in to the App Store"
+	for program in ${brewProgramsToInstall[@]};
+	do
+		brew cask install $program
+	done
+
+	# Log into Apple account and install App Store apps
+	if ! type mas &>/dev/null 2>&1; then
+		brew install mas
+		echo "What is your Apple ID?"
+		read appleID
+		mas signin --dialog $appleID
+	elif ! mas account &>/dev/null; then
+		echo "What is your Apple ID?"
+		read appleID
+		mas signin --dialog $appleID
+	fi
+
+	for program in "${appStoreProgramsToInstall[@]}";
+	do
+		case "$program" in 
+		"Better Snap Tool")
+			mas install 417375580
+			;;
+		"Flycut")
+			mas install 442160987
+			;;
+		"Microsoft Remote Desktop")
+			mas install 1295203466
+			;;
+		esac
+	done
 fi
 
 # Change default system settings
