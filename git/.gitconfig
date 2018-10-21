@@ -1,9 +1,0 @@
-
-[user]
-name = 
-email =
-
-[core]
-excludesfile = ~/.gitignore_global
-editor = subl
-mergeoptions = --no-edit

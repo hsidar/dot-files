@@ -23,9 +23,10 @@ function mkcd {
   fi
 }
 
-
 #PATH
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
 export EDITOR='subl -w'
 #add Homebrew’s sbin to PATH
 export PATH=/usr/local/sbin:$PATH
+export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
