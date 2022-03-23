@@ -10,5 +10,7 @@
   "diagnostic.warningSign": "😬",
   "diagnostic.infoSign": "👀",
   "javascript.suggest.autoImports": true, 
-  "typescript.suggest.autoImports": true
+  "typescript.suggest.autoImports": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "snippets.ultisnips.usePythonx": false
 }

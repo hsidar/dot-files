@@ -50,3 +50,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " make error texts have a red color
 highlight CocErrorHighlight ctermfg=Red  guifg=#ff0000
 
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> gp <Plug>(coc-diagnostic-prev)
+nmap <silent> ge <Plug>(coc-diagnostic-next)
+
+

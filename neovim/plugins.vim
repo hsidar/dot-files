@@ -4,7 +4,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'connorholyday/vim-snazzy'
 Plug 'rafalbromirski/vim-aurora'
-Plug 'epmor/hotline-vim'
 Plug 'KabbAmine/yowish.vim'
 Plug 'artanikin/vim-synthwave84'
 Plug 'kyoz/purify', { 'rtp': 'vim' }
@@ -20,3 +19,5 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'vim-test/vim-test'
 Plug 'vim-test/vim-test'
 Plug 'ggandor/lightspeed.nvim'
+Plug 'antoinemadec/coc-fzf'
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}

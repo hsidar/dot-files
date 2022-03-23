@@ -33,6 +33,4 @@ noremap M N
 " Clear search highlighting
 nnoremap <silent> <esc> :noh<return><esc>
 
-" Comfortable Motion
-nnoremap <silent> <S-t> :call comfortable_motion#flick(200)<CR>
-nnoremap <silent> <S-s> :call comfortable_motion#flick(-200)<CR>
+tnoremap q <C-\><C-n>
