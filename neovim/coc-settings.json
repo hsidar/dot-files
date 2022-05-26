@@ -1,16 +1,35 @@
-{  
-  "diagnostic.checkCurrentLine": true,
-  "coc.preferences.colorSupport": true,
-  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "suggest.echodocSupport": true,
-  "suggest.maxCompleteItemCount": 20,
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "typescript.tsx", "prisma"],
-  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
-  "diagnostic.errorSign": "☠️",
-  "diagnostic.warningSign": "😬",
-  "diagnostic.infoSign": "👀",
-  "javascript.suggest.autoImports": true, 
-  "typescript.suggest.autoImports": true,
-  "coc.preferences.extensionUpdateCheck": "daily",
-  "snippets.ultisnips.usePythonx": false
+{
+    "diagnostic.checkCurrentLine": true,
+    "coc.preferences.colorSupport": true,
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+    "suggest.echodocSupport": true,
+    "suggest.maxCompleteItemCount": 20,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "json",
+        "javascriptreact",
+        "typescript.tsx",
+        "prisma",
+        "ruby"
+    ],
+    "eslint.filetypes": [
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "javascriptreact",
+        "typescript.tsx"
+    ],
+    "diagnostic.errorSign": "☠️",
+    "diagnostic.warningSign": "😬",
+    "diagnostic.infoSign": "👀",
+    "javascript.suggest.autoImports": true,
+    "typescript.suggest.autoImports": true,
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "snippets.ultisnips.usePythonx": false,
+    "solargraph.diagnostics": true,
+    "solargraph.autoformat": true,
+    "solargraph.formatting": true,
+    "solargraph.hover": true
 }
