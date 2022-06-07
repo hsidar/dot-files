@@ -11,8 +11,7 @@
         "json",
         "javascriptreact",
         "typescript.tsx",
-        "prisma",
-        "ruby"
+        "prisma"
     ],
     "eslint.filetypes": [
         "javascript",

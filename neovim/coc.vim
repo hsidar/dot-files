@@ -2,8 +2,7 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf'
 
-" Prisma syntax highlighting
-Plug 'pantharshit00/vim-prisma'
+let g:coc_global_extensions = ['coc-solargraph', 'coc-eslint', 'coc-tsserver']
 
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? coc#_select_confirm() :

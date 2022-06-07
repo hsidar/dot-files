@@ -19,7 +19,6 @@ Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/goyo.vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'vim-test/vim-test'
-Plug 'vim-test/vim-test'
 Plug 'ggandor/lightspeed.nvim'
 Plug 'antoinemadec/coc-fzf'
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}

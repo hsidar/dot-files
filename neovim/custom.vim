@@ -33,4 +33,4 @@ noremap M N
 " Clear search highlighting
 nnoremap <silent> <esc> :noh<return><esc>
 
-tnoremap q <C-\><C-n>
+tnoremap <Leader>q <C-\><C-n>

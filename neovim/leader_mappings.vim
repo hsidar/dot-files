@@ -2,7 +2,7 @@
 noremap <Leader>y "*y
 noremap <Leader>m zz
 noremap <Leader>u :bn<CR>
-noremap <Leader>j :bd<CR>
+noremap <Leader>j :bd!<CR>
 noremap <Leader>; <C-R>
 
 nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
