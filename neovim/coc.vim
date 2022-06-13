@@ -2,8 +2,9 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf'
 
-let g:coc_global_extensions = ['coc-solargraph', 'coc-eslint', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-eslint', 'coc-tsserver', 'coc-snippets']
 
+" Tab completion for snippets
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? coc#_select_confirm() :
   \ coc#expandableOrJumpable() ?
@@ -16,7 +17,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_next = '<TAB>'
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin

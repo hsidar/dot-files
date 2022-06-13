@@ -11,7 +11,8 @@
         "json",
         "javascriptreact",
         "typescript.tsx",
-        "prisma"
+        "prisma",
+        "ruby"
     ],
     "eslint.filetypes": [
         "javascript",
@@ -27,6 +28,7 @@
     "typescript.suggest.autoImports": true,
     "coc.preferences.extensionUpdateCheck": "daily",
     "snippets.ultisnips.usePythonx": false,
+    "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
     "solargraph.diagnostics": true,
     "solargraph.autoformat": true,
     "solargraph.formatting": true,

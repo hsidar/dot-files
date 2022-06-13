@@ -12,8 +12,8 @@ let g:airline#extensions#wordcount#enabled = 0
 map u H0<Plug>Lightspeed_s
 
 " Comfortable Motion
-nnoremap <silent> <S-t> :call comfortable_motion#flick(123)<CR>
-nnoremap <silent> <S-s> :call comfortable_motion#flick(-123)<CR>
+nnoremap <silent> <S-t> :call comfortable_motion#flick(75)<CR>
+nnoremap <silent> <S-s> :call comfortable_motion#flick(-75)<CR>
 
 let test#strategy = {
   \ 'nearest': 'neovim',
@@ -28,4 +28,4 @@ require'sniprun'.setup({
     }})
 EOF
 
-command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
