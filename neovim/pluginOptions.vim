@@ -9,11 +9,11 @@ let g:airline#extensions#wordcount#enabled = 0
 " let g:airline#extensions#tabline#left_sep = ' '
 " let g:airline#extensions#tabline#left_alt_sep = ' '
 
-map u H0<Plug>Lightspeed_s
+map u L0<Plug>Lightspeed_s
 
 " Comfortable Motion
 nnoremap <silent> <S-t> :call comfortable_motion#flick(75)<CR>
-nnoremap <silent> <S-s> :call comfortable_motion#flick(-75)<CR>
+nnoremap <silent> <S-n> :call comfortable_motion#flick(-75)<CR>
 
 let test#strategy = {
   \ 'nearest': 'neovim',

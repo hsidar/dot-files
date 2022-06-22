@@ -14,23 +14,27 @@ cnoreabbrev <expr> qq (getcmdtype() == ':' && getcmdline() =~ '^qq$')? 'q!' : 'q
 " left
 noremap h h
 " right
-noremap n l
+noremap s l
 " up
-noremap s k
+noremap n k
 " down
 noremap t j
 
 " undo
 noremap ; u
 
-" half-page up/down
-noremap T <C-d>
-noremap S <C-u>
+" beginning/end of word
+noremap S e
+noremap H b
 
-" remap m key for "next/previous search"
-noremap m n
-noremap M N
+noremap L H
+
+" remap key for "next/previous search"
+noremap b n
+noremap B N
+
 " Clear search highlighting
 nnoremap <silent> <esc> :noh<return><esc>
 
+" Put terminal in normal mode
 tnoremap <Leader>q <C-\><C-n>

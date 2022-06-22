@@ -1,12 +1,25 @@
 snippet def
-def ${1:NameOfThing}
+def ${1:nameOfThing}
 		${2:Stuff}
+end
+
+snippet defr
+def ${1:nameOfThing}(${2:Args})
+		${3:Stuff}
 end
 
 snippet lam
-{ |${1:it}| ${2:Stuff}}
+{ |${1:it}| ${2:Stuff} }
 
-snippet block
+snippet bl
 do |${1: it}|
 		${2:Stuff}
 end
+
+snippet unt
+until ${1: expression}
+
+snippet iff
+if ${1: expression}
+
+

@@ -11,7 +11,7 @@ nmap <leader>vv :source ~/.config/nvim/init.vim<cr>
 
 noremap <Leader>o :Buffers<CR>
 noremap <Leader>e :Ag<CR>
-
+noremap <Leader>i :Mark<CR>
 nnoremap <expr> <Leader>a (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
 
 noremap <Leader>z :Goyo<CR>
