@@ -3,6 +3,7 @@ noremap <Leader>y "*y
 noremap <Leader>m zz
 noremap <Leader>u :bn<CR>
 noremap <Leader>j :bd!<CR>
+noremap <leader>t :%bd\|e#\|bd#<CR>
 noremap <Leader>; <C-R>
 
 nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
@@ -21,3 +22,5 @@ noremap <Leader>tf :TestFile<CR>
 noremap <Leader>ts :TestSuite<CR>
 
 nnoremap <leader>d "_dd
+
+noremap <leader>b :Git blame<CR>
