@@ -24,3 +24,7 @@ noremap <Leader>ts :TestSuite<CR>
 nnoremap <leader>d "_dd
 
 noremap <leader>b :Git blame<CR>
+
+" Put terminal in normal mode
+tnoremap <Leader>q <C-\><C-n>
+

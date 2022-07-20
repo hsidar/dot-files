@@ -36,5 +36,5 @@ noremap B N
 " Clear search highlighting
 nnoremap <silent> <esc> :noh<return><esc>
 
-" Put terminal in normal mode
-tnoremap <Leader>q <C-\><C-n>
+:command W :noa w
+

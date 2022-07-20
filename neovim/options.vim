@@ -12,6 +12,7 @@ set hidden
 set number
 set nowrap
 set clipboard=unnamedplus
+set cpoptions+=x
 
 filetype on
 filetype plugin on

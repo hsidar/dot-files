@@ -1,7 +1,6 @@
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'connorholyday/vim-snazzy'
 Plug 'rafalbromirski/vim-aurora'
 Plug 'KabbAmine/yowish.vim'
