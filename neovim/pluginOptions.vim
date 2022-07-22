@@ -18,3 +18,11 @@ require'sniprun'.setup({
     }})
 EOF
 
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+      \ }
+      \ }
+
+" Modify fzf ag window search to not search file names
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)

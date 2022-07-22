@@ -36,5 +36,7 @@ noremap B N
 " Clear search highlighting
 nnoremap <silent> <esc> :noh<return><esc>
 
-:command W :noa w
+" Run autocommands such as auto-formatting on capital W write only
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+cnoreabbrev <expr> w ((getcmdtype() is# ':' && getcmdline() is# 'w')?('noa w'):('w'))
 
