@@ -23,10 +23,14 @@ noremap t j
 " undo
 noremap ; u
 
+" copy
+noremap j y
+
 " beginning/end of word
 noremap S e
 noremap H b
 
+" top of screen
 noremap L H
 
 " remap key for "next/previous search"
