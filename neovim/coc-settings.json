@@ -21,6 +21,7 @@
         "javascriptreact",
         "typescript.tsx"
     ],
+    "eslint.autoFixOnSave": true,
     "diagnostic.errorSign": "☠️",
     "diagnostic.warningSign": "😬",
     "diagnostic.infoSign": "👀",
@@ -32,5 +33,6 @@
     "solargraph.diagnostics": true,
     "solargraph.autoformat": true,
     "solargraph.formatting": true,
-    "solargraph.hover": true
+    "solargraph.hover": true,
+    "snippets.ultisnips.pythonPrompt": false
 }

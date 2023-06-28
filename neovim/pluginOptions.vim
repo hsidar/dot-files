@@ -16,6 +16,7 @@ require'sniprun'.setup({
   display = {
     "TempFloatingWindow",      --# display results in a floating window
     }})
+require('glow').setup()
 EOF
 
 let g:lightline = {
@@ -26,3 +27,4 @@ let g:lightline = {
 
 " Modify fzf ag window search to not search file names
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+
